@@ -10,12 +10,12 @@ You will need to have the proper IAM Role configuration in place.  See `Configur
   
 Additionally, see the boto documentation for more information: http://boto.readthedocs.org/en/latest/boto_config_tut.html
 
-Install XCode
+Install Xcode
 ==========================
-XCode contains a number of tools that are required to install Security Monkey dependencies.  This needs to be installed from the App Store (free download):
+Xcode contains a number of tools that are required to install Security Monkey dependencies.  This needs to be installed from the App Store (free download):
 https://itunes.apple.com/us/app/xcode/id497799835?mt=12
 
-After XCode is installed, you need to accept the XCode license agreement.  To do that, run::
+After Xcode is installed, you need to accept the Xcode license agreement.  To do that, run::
 
     sudo xcodebuild -license   # You will need to type in 'agree'
 
@@ -23,7 +23,7 @@ Install Homebrew (http://brew.sh)
 ==========================
 Requirement - Xcode Command Line Tools (Popup - Just click Install)::
 
-    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 Install Pip
 ==========================
@@ -40,7 +40,7 @@ Virtualenv is a tool to create isolated Python environments.  You will need to i
 VirtualenvWrapper
   virtualenvwrapper is a set of extensions to Ian Bicking’s virtualenv tool. The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies. ::
 
-    sudo pip install virtualenvwrapper
+    sudo pip install virtualenvwrapper --ignore-installed six
 
 Configure VirtualEnvWrapper
   Configure VirtualEnvWrapper so it knows where to store the virtualenvs and where the virtualenvwerapper script is located. ::
@@ -82,11 +82,11 @@ Install Postgres.  Create a database for security monkey and add a role.  Set th
 
     brew install postgresql
 
-Start the DB in a new shell::
+Open a new shell, then start the DB::
 
     postgres -D /usr/local/var/postgres
 
-Create the database and users and set the timezone. ::
+Go back to your previous shell, then create the database and users and set the timezone. ::
 
     psql -d postgres -h localhost
     CREATE DATABASE "securitymonkeydb";
@@ -181,6 +181,11 @@ Next, you will create the ``securitymonkey.conf`` NGINX configuration file.  Cre
           index ui.html;
       }
     }
+
+Create the ``devlog/security_monkey.access.log`` file. ::
+
+    mkdir devlog
+    touch devlog/security_monkey.access.log
 
 NGINX can be started by running the ``nginx`` command in the Terminal.  You will need to run ``nginx`` before moving on.  This will also output any errors that are encountered when reading the configuration files.
 
