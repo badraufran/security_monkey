@@ -31,6 +31,12 @@ A tool for installing and managing Python packages::
 
     sudo easy_install pip
 
+Install Python
+==========================
+Install the latest version of Python 2.7 with Homebrew::
+
+    sudo brew install python
+
 Setup Virtualenv
 ==========================
 Virtualenv is a tool to create isolated Python environments.  You will need to install it::
