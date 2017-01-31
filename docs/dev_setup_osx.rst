@@ -46,7 +46,7 @@ Virtualenv is a tool to create isolated Python environments.  You will need to i
 VirtualenvWrapper
   virtualenvwrapper is a set of extensions to Ian Bicking’s virtualenv tool. The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies. ::
 
-    sudo pip install virtualenvwrapper --ignore-installed six
+    sudo pip install virtualenvwrapper
 
 Configure VirtualEnvWrapper
   Configure VirtualEnvWrapper so it knows where to store the virtualenvs and where the virtualenvwerapper script is located. ::
