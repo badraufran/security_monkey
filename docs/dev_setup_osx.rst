@@ -25,17 +25,17 @@ Requirement - Xcode Command Line Tools (Popup - Just click Install)::
 
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-Install Pip
-==========================
-A tool for installing and managing Python packages::
-
-    sudo easy_install pip
-
 Install Python
 ==========================
 Install the latest version of Python 2.7 with Homebrew::
 
     sudo brew install python
+
+Upgrade Pip
+==========================
+A tool for installing and managing Python packages. You may need to update Pip, so run::
+
+    sudo pip install --upgrade pip
 
 Setup Virtualenv
 ==========================
